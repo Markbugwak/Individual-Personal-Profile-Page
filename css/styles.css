@@ -241,35 +241,24 @@ address {
 .navbar {
     width: 100%;
     padding: 25px 40px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background: #000000;
+    background: rgba(0, 0, 0, 0.95);
     color: #ffffff;
-
     border-bottom: 4px solid #ff8000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
 }
 
 .logo {
     font-size: 28px;
     font-weight: 900;
     letter-spacing: -2px;
-
     color: #ffffff;
-}
-
-.logo::after {
-    content: "";
-    display: inline-block;
-
-    width: 8px;
-    height: 8px;
-
-    margin-left: 5px;
-
-    background: #ff8000;
 }
 
 .nav-links {
@@ -281,10 +270,7 @@ address {
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 2px;
-
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -298,26 +284,22 @@ address {
 
 .hero {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
-
     background: #ffffff;
 }
 
 .hero-content {
     flex: 1;
-
     display: grid;
     grid-template-columns: 35% 65%;
-
     padding: 40px;
+    margin-top: 80px;
 }
 
 .hero-image {
     display: flex;
     align-items: flex-end;
-
     padding-bottom: 20px;
 }
 
@@ -329,22 +311,19 @@ address {
     filter: grayscale(100%);
     border: 3px solid #000000;
     box-shadow: 12px 12px 0 #ff8000;
-    
-    /* NEW: Smooth transition for hover effects */
     transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.5s ease;
 }
 
 .hero-image img:hover {
-    filter: grayscale(0%); /* Brings the color back */
-    transform: translate(-6px, -6px); /* Moves image up/left slightly */
-    box-shadow: 18px 18px 0 #ff8000; /* Extends the orange shadow */
+    filter: grayscale(0%);
+    transform: translate(-6px, -6px);
+    box-shadow: 18px 18px 0 #ff8000;
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding-left: 40px;
 }
 
@@ -352,51 +331,37 @@ address {
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 3px;
-
     margin-bottom: 25px;
-
     color: #ff8000;
 }
 
 .hero-text h1 {
     font-size: clamp(60px, 9vw, 150px);
-
     line-height: 0.8;
-
     letter-spacing: -7px;
-
     font-weight: 900;
 }
 
 .hero-text h1 span {
     font-style: italic;
-
     color: #ff8000;
 }
 
 .hero-description {
     max-width: 400px;
-
     margin-top: 45px;
-
     font-size: 16px;
-
     border-left: 5px solid #ff8000;
-
     padding-left: 15px;
 }
 
 .hero-bottom {
     display: flex;
     justify-content: space-between;
-
     padding: 20px 40px;
-
     background: #000000;
     color: #ffffff;
-
     border-top: 4px solid #ff8000;
-
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -410,18 +375,14 @@ address {
 .section {
     display: grid;
     grid-template-columns: 12% 88%;
-
     border-top: 1px solid #000000;
 }
 
 .section-number {
     padding: 35px;
-
     font-size: 12px;
     font-weight: bold;
-
     border-right: 1px solid #000000;
-
     color: #ff8000;
 }
 
@@ -433,27 +394,20 @@ address {
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 3px;
-
     margin-bottom: 30px;
-
     color: #ff8000;
 }
 
 .section-content h2 {
     font-size: clamp(50px, 8vw, 130px);
-
     line-height: 0.82;
-
     letter-spacing: -6px;
-
     font-weight: 900;
-
     margin-bottom: 100px;
 }
 
 .section-content h2 span {
     font-style: italic;
-
     color: #ff8000;
 }
 
@@ -464,29 +418,21 @@ address {
 
 .about-grid {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 80px;
-
     max-width: 1000px;
 }
 
 .about-intro p {
     font-size: 30px;
-
     line-height: 1.1;
-
     font-weight: bold;
 }
 
 .about-description {
     max-width: 500px;
-
     font-size: 16px;
-
     border-left: 4px solid #ff8000;
-
     padding-left: 20px;
 }
 
@@ -504,7 +450,7 @@ address {
     overflow: hidden;
     border-top: 3px solid #000000;
     border-bottom: 3px solid #000000;
-    padding: 0; /* Removed padding so vertical divider lines touch top & bottom borders */
+    padding: 0;
     background: #ffffff;
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -519,12 +465,12 @@ address {
 
 .tech-item {
     min-width: 180px;
-    height: 150px; /* Fixed height for uniform box */
+    height: 150px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;     /* Horizontal center */
-    justify-content: center; /* Vertical center */
+    align-items: center;
+    justify-content: center;
     gap: 16px;
     text-align: center;
     border-right: 1px solid #000000;
@@ -549,7 +495,6 @@ address {
     white-space: nowrap;
 }
 
-
 .tech-item:hover img {
     filter: grayscale(0%);
     opacity: 1;
@@ -560,22 +505,14 @@ address {
     color: #ff8000;
 }
 
-
-/* Technology logos move LEFT → RIGHT */
-
 @keyframes moveRight {
-
     from {
         transform: translateX(-50%);
     }
-
     to {
         transform: translateX(0);
     }
 }
-
-
-/* Pause animation */
 
 .tech-marquee:hover .tech-track {
     animation-play-state: paused;
@@ -592,36 +529,23 @@ address {
 
 .project {
     display: grid;
-
     grid-template-columns: 12% 88%;
-
     border-bottom: 1px solid #000000;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        padding 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, padding 0.3s ease;
 }
 
 .project:hover {
     background: #000000;
-
     color: #ffffff;
-
     padding-left: 20px;
-
     border-left: 8px solid #ff8000;
 }
 
 .project-number {
     padding: 30px;
-
     font-size: 12px;
-
     font-weight: bold;
-
     border-right: 1px solid currentColor;
-
     color: #ff8000;
 }
 
@@ -631,45 +555,33 @@ address {
 
 .project-info h3 {
     font-size: clamp(40px, 6vw, 90px);
-
     line-height: 0.9;
-
     letter-spacing: -4px;
-
     margin-bottom: 25px;
 }
 
 .project-info p {
     max-width: 600px;
-
     font-size: 15px;
-
     margin-bottom: 25px;
 }
 
 .project-tags {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 10px;
 }
 
 .project-tags span {
     border: 1px solid currentColor;
-
     padding: 7px 12px;
-
     font-size: 9px;
-
     font-weight: bold;
-
     letter-spacing: 1px;
 }
 
 .project:hover .project-tags span {
     border-color: #ff8000;
-
     color: #ff8000;
 }
 
@@ -680,23 +592,16 @@ address {
 
 .education-box {
     display: grid;
-
     grid-template-columns: 20% 80%;
-
     border-top: 1px solid #000000;
-
     border-bottom: 1px solid #000000;
 }
 
 .education-year {
     padding: 30px;
-
     font-size: 11px;
-
     font-weight: bold;
-
     border-right: 1px solid #000000;
-
     color: #ff8000;
 }
 
@@ -706,11 +611,8 @@ address {
 
 .education-box h3 {
     max-width: 700px;
-
     font-size: 35px;
-
     line-height: 1;
-
     margin-bottom: 20px;
 }
 
@@ -725,86 +627,52 @@ address {
 
 .contact-section {
     background: #000000;
-
     color: #ffffff;
-
     padding: 120px 40px;
-
     border-top: 8px solid #ff8000;
 }
 
 .contact-inner {
     max-width: 1300px;
-
     margin: auto;
 }
 
 .contact-section .section-label {
     margin-bottom: 60px;
-
     color: #ff8000;
 }
 
 .contact-section h2 {
     font-size: clamp(70px, 12vw, 180px);
-
     line-height: 0.78;
-
     letter-spacing: -8px;
-
     font-weight: 900;
-
     margin-bottom: 100px;
 }
 
 .contact-section h2 span {
     font-style: italic;
-
     color: #ff8000;
 }
 
 .contact-links {
     display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
+    align-items: center;
+    gap: 35px;
 }
 
 .contact-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    border: 1px solid #ffffff;
-
-    padding: 15px 25px;
-
-    font-size: 11px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.contact-links a img {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-    color: currentColor;
+    font-size: 38px;
+    color: #ffffff;
+    text-decoration: none;
+    border: none !important;
+    background: transparent !important;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-links a:hover {
-    background: #ff8000;
-
-    color: #000000;
-
-    border-color: #ff8000;
+    color: #ff8000;
+    transform: scale(1.25);
 }
 
 
@@ -814,22 +682,20 @@ address {
 
 footer {
     background: #000000;
-
     color: #ffffff;
-
     border-top: 1px solid #ffffff;
-
-    padding: 20px 40px;
-
+    padding: 25px 40px;
     display: flex;
-
     justify-content: space-between;
-
-    font-size: 9px;
-
+    align-items: center;
+    font-size: 10px;
     font-weight: bold;
-
     letter-spacing: 2px;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
 }
 
 footer span {
@@ -838,30 +704,30 @@ footer span {
 
 
 /* ==================================================
+   ANIMATIONS
+================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==================================================
    RESPONSIVE DESIGN
 ================================================== */
 
 @media (max-width: 800px) {
-
-    /* Navigation */
-
     .navbar {
-    width: 100%;
-    padding: 25px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.95); /* Slightly transparent black */
-    color: #ffffff;
-    border-bottom: 4px solid #ff8000;
-    
-    /* NEW: Makes it sticky and blurry */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    backdrop-filter: blur(5px); 
-}
+        padding: 20px;
+        border-bottom-width: 3px;
+    }
 
     .nav-links {
         gap: 15px;
@@ -871,26 +737,19 @@ footer span {
         font-size: 8px;
     }
 
-
-    /* Hero */
-
-.hero-content {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 35% 65%;
-    padding: 40px;
-    margin-top: 80px; /* NEW: Offsets the fixed navbar */
-}
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        margin-top: 60px;
+    }
 
     .hero-image {
         justify-content: center;
-
         padding-bottom: 40px;
     }
 
     .hero-image img {
         width: 60%;
-
         box-shadow: 8px 8px 0 #ff8000;
     }
 
@@ -900,7 +759,6 @@ footer span {
 
     .hero-text h1 {
         font-size: 16vw;
-
         letter-spacing: -4px;
     }
 
@@ -910,12 +768,8 @@ footer span {
 
     .hero-bottom {
         padding: 15px 20px;
-
         font-size: 7px;
     }
-
-
-    /* Sections */
 
     .section {
         grid-template-columns: 1fr;
@@ -923,9 +777,7 @@ footer span {
 
     .section-number {
         padding: 20px;
-
         border-right: none;
-
         border-bottom: 1px solid #000000;
     }
 
@@ -935,18 +787,12 @@ footer span {
 
     .section-content h2 {
         font-size: 17vw;
-
         letter-spacing: -4px;
-
         margin-bottom: 60px;
     }
 
-
-    /* About */
-
     .about-grid {
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
 
@@ -954,14 +800,9 @@ footer span {
         font-size: 25px;
     }
 
-
-    /* Tech Stack */
-
     .tech-item {
         min-width: 140px;
-
         padding: 15px 20px;
-
         gap: 20px;
     }
 
@@ -974,18 +815,13 @@ footer span {
         font-size: 10px;
     }
 
-
-    /* Projects */
-
     .project {
         grid-template-columns: 1fr;
     }
 
     .project-number {
         border-right: none;
-
         border-bottom: 1px solid currentColor;
-
         padding: 15px 20px;
     }
 
@@ -995,12 +831,8 @@ footer span {
 
     .project-info h3 {
         font-size: 13vw;
-
         letter-spacing: -3px;
     }
-
-
-    /* Education */
 
     .education-box {
         grid-template-columns: 1fr;
@@ -1008,7 +840,6 @@ footer span {
 
     .education-year {
         border-right: none;
-
         border-bottom: 1px solid #000000;
     }
 
@@ -1020,47 +851,20 @@ footer span {
         font-size: 28px;
     }
 
-
-    /* Contact */
-
     .contact-section {
         padding: 80px 25px;
-
         border-top-width: 5px;
     }
 
     .contact-section h2 {
         font-size: 18vw;
-
         letter-spacing: -5px;
-
         margin-bottom: 70px;
     }
 
-
-    /* Footer */
-
     footer {
         padding: 20px;
-
         flex-direction: column;
-
         gap: 10px;
     }
-
-
-    /* ==================================================
-   ANIMATIONS (NEW)
-================================================== */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px); /* Starts pushed down */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0); /* Slides up into place */
-}
-
 }
