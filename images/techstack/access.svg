@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Microsoft Access</title>
+  <rect x="8" y="10" width="40" height="44" rx="3" fill="#a4373a"/>
+  <path d="M18 23h14c5 0 8 3 8 7s-3 7-8 7h-7v7h-7zm7 5v4h6c1.5 0 2.5-.7 2.5-2s-1-2-2.5-2z" fill="#fff"/>
+  <path d="M43 18h11v28H43z" fill="#7f1d25" opacity=".9"/>
+  <path d="M47 25h5v14h-5z" fill="#fff" opacity=".8"/>
+</svg>
