@@ -41,22 +41,30 @@
     <header class="hero" id="home">
 
         <nav class="navbar" aria-label="Main navigation">
-            <a href="#home" class="logo">MAB.</a>
+    <a href="#home" class="logo">MAB.</a>
 
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
+    <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
 
-                <!-- DARK MODE TOGGLE -->
-                <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-            </div>
-        </nav>
+        <!-- DARK MODE TOGGLE -->
+        <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- HAMBURGER -->
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open menu"
+                aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+</nav>
 
         <div class="hero-content">
             <figure class="hero-image">
@@ -253,6 +261,39 @@
                 localStorage.setItem('theme', 'light');
             }
         });
+
+
+        // ===== MOBILE HAMBURGER MENU =====
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+const navOverlay = document.getElementById('nav-overlay');
+
+function setMenu(open) {
+    navToggle.classList.toggle('active', open);
+    navLinks.classList.toggle('active', open);
+    navOverlay.classList.toggle('active', open);
+    document.body.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+
+navToggle.addEventListener('click', () => {
+    setMenu(!navLinks.classList.contains('active'));
+});
+
+navOverlay.addEventListener('click', () => setMenu(false));
+
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') setMenu(false);
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 800) setMenu(false);
+});
 
         // ===== CINEMATIC LOADING SEQUENCE =====
         window.addEventListener("load", function () {

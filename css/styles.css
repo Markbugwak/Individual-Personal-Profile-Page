@@ -215,6 +215,47 @@ address { font-style: normal; }
 
 
 /* ==================================================
+   HAMBURGER MENU
+================================================== */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10001;
+    flex-shrink: 0;
+}
+.nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #ffffff;
+    transition: transform 0.35s ease, opacity 0.2s ease, background 0.3s ease;
+}
+.nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); background: #ff8000; }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background: #ff8000; }
+
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 9998;
+}
+.nav-overlay.active { opacity: 1; visibility: visible; }
+
+
+/* ==================================================
    HERO SECTION
 ================================================== */
 .hero {
@@ -617,16 +658,44 @@ body.dark-mode .hero-image img { border-color: #ffffff; }
 ================================================== */
 @media (max-width: 800px) {
     .navbar { padding: 18px 20px; }
-    .nav-links { gap: 12px; }
-    .nav-links a { font-size: 8px; letter-spacing: 1px; }
+    
+    
     .nav-right { gap: 12px; }
     #theme-toggle { width: 34px; height: 34px; font-size: 13px; }
+    
 
     /* Loader */
     .loader-bar { height: 9%; }
     .loader-text { letter-spacing: -2px; margin-bottom: 6px; }
     .loader-sub { letter-spacing: 3px; }
     .loader-progress { bottom: 10%; }
+
+    .nav-toggle { display: flex; }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 72%;
+        max-width: 300px;
+        height: 100vh;
+        background: #0a0a0a;
+        border-left: 4px solid #ff8000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 34px;
+        padding: 0 32px;
+        transition: right 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+        z-index: 9999;
+    }
+    .nav-links.active { right: 0; }
+    .nav-links a {
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: #ffffff;
+    }
+    body.nav-open { overflow: hidden; }
 
     .hero-content {
         grid-template-columns: 1fr;
