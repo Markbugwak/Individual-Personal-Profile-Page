@@ -2,46 +2,33 @@
 <html lang="en">
 
 <head>
-    <!-- Basic page information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Portfolio of Mark Anthony A. Blanco, a Computer Engineering student."
-    >
-
+    <meta name="description" content="Portfolio of Mark Anthony A. Blanco, a Computer Engineering student.">
     <title>Mark Anthony A. Blanco | Computer Engineering Student</title>
 
-    <!-- External CSS stylesheet -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 
 <body>
 
     <!-- ==================== LOADING SCREEN ==================== -->
     <div id="loader">
-        <div class="loader-content">
-            <div class="car-container">
-                <!-- Formula 1 racing car -->
-                <div class="f1-car">
-                    <div class="car-body"></div>
-                    <div class="cockpit"></div>
-                    <div class="halo"></div>
-                    <div class="sidepod"></div>
-                    <div class="number">12</div>
-                    <div class="wing-front"></div>
-                    <div class="wing-rear"></div>
-                    <div class="rear-wing"></div>
-                    <div class="wheel wheel-f"></div>
-                    <div class="wheel wheel-r"></div>
-                </div>
-                <div class="road-line"></div>
-            </div>
+        <div class="loader-bar loader-bar-top"></div>
+        <div class="loader-bar loader-bar-bottom"></div>
+
+        <img src="images/loadingscreen/mclaren.svg" alt="McLaren 720S Rear" class="mclaren-img">
+        <div class="loader-vignette"></div>
+
+        <div class="loader-text-box">
             <p class="loader-text">MAB<span>.</span></p>
             <p class="loader-sub">LOADING PORTFOLIO...</p>
+        </div>
+
+        <div class="loader-progress">
+            <div class="loader-progress-fill"></div>
         </div>
     </div>
 
@@ -49,569 +36,249 @@
     <!-- ==================================================
          HEADER / HERO SECTION
     ================================================== -->
-
     <header class="hero" id="home">
 
-        <!-- Main navigation -->
         <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo">MAB.</a>
 
-            <a href="#home" class="logo">
-                MAB.
-            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#about">ABOUT</a>
-                </li>
-
-                <li>
-                    <a href="#skills">SKILLS</a>
-                </li>
-
-                <li>
-                    <a href="#projects">PROJECTS</a>
-                </li>
-
-                <li>
-                    <a href="#contact">CONTACT</a>
-                </li>
-
-            </ul>
-
+                <!-- DARK MODE TOGGLE -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
         </nav>
 
-
-        <!-- Hero introduction -->
         <div class="hero-content">
-
             <figure class="hero-image">
-
-                <img
-                    src="images/profile.jpg"
-                    alt="Portrait of Mark Anthony A. Blanco"
-                >
-
+                <img src="images/profile.jpg" alt="Portrait of Mark Anthony A. Blanco">
             </figure>
 
-
             <div class="hero-text">
-
-                <p class="hero-small">
-                    COMPUTER ENGINEERING STUDENT
-                </p>
-
-                <h1>
-                    MARK<br>
-                    ANTHONY<br>
-                    <span>A. BLANCO</span>
-                </h1>
-
+                <p class="hero-small">COMPUTER ENGINEERING STUDENT</p>
+                <h1>MARK<br>ANTHONY<br><span>A. BLANCO</span></h1>
                 <p class="hero-description">
                     Building practical technology through software,
                     systems, and problem-solving.
                 </p>
-
             </div>
-
         </div>
 
-
-        <!-- Additional hero information -->
         <div class="hero-bottom">
-
-            <span>
-                CEBU INSTITUTE OF TECHNOLOGY – UNIVERSITY
-            </span>
-
-            <span>
-                SCROLL ↓
-            </span>
-
+            <span>CEBU INSTITUTE OF TECHNOLOGY – UNIVERSITY</span>
+            <span>SCROLL ↓</span>
         </div>
-
     </header>
-
 
 
     <!-- ==================================================
          MAIN CONTENT
     ================================================== -->
-
     <main>
 
-
-        <!-- ==================================================
-             ABOUT SECTION
-        ================================================== -->
-
+        <!-- ABOUT SECTION -->
         <section id="about" class="section about-section reveal">
-
-            <div class="section-number">
-                01
-            </div>
-
-
+            <div class="section-number">01</div>
             <div class="section-content">
-
-                <p class="section-label">
-                    ABOUT ME
-                </p>
-
-                <h2>
-                    I BUILD<br>
-                    THINGS THAT<br>
-                    <span>WORK.</span>
-                </h2>
-
+                <p class="section-label">ABOUT ME</p>
+                <h2>I BUILD<br>THINGS THAT<br><span>WORK.</span></h2>
 
                 <div class="about-grid">
-
                     <div class="about-intro">
-
-                        <p>
-                            I am a Computer Engineering student from
-                            Cebu Institute of Technology – University.
-                        </p>
-
+                        <p>I am a Computer Engineering student from Cebu Institute of Technology – University.</p>
                     </div>
-
-
                     <div class="about-description">
-
-                        <p>
-                            My interests are focused on software development,
-                            system design, user experience, and practical
-                            technology solutions.
-                        </p>
-
-                        <p>
-                            I enjoy turning ideas into functional applications
-                            while continuously improving my programming,
-                            design, and problem-solving skills.
-                        </p>
-
+                        <p>My interests are focused on software development, system design, user experience, and practical technology solutions.</p>
+                        <p>I enjoy turning ideas into functional applications while continuously improving my programming, design, and problem-solving skills.</p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-
-        <!-- ==================================================
-             TECH STACK SECTION
-        ================================================== -->
-
+        <!-- TECH STACK SECTION -->
         <section id="skills" class="section skills-section reveal">
-
-            <div class="section-number">
-                02
-            </div>
-
-
+            <div class="section-number">02</div>
             <div class="section-content">
+                <p class="section-label">TECHNOLOGY</p>
+                <h2>MY<br>TECH STACK.</h2>
 
-                <p class="section-label">
-                    TECHNOLOGY
-                </p>
-
-                <h2>
-                    MY<br>
-                    TECH STACK.
-                </h2>
-
-
-                <!-- Moving technology logo marquee -->
                 <div class="tech-marquee">
-
                     <div class="tech-track">
+                        <!-- SET 1 -->
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/c" alt="C"><span>C</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/csharp" alt="C#"><span>C#</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/python" alt="Python"><span>PYTHON</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/microsoftaccess" alt="MS Access"><span>MS ACCESS</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript"><span>JAVASCRIPT</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/react" alt="React"><span>REACT.JS</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind"><span>TAILWIND CSS</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase"><span>SUPABASE</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/figma" alt="Figma"><span>FIGMA</span></div>
 
-
-                        <!-- FIRST SET OF TECHNOLOGIES -->
-
-                        <div class="tech-item">
-                            <img src="images/techstack/c.svg" alt="C logo">
-                            <span>C</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/csharp.svg" alt="C# logo">
-                            <span>C#</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/python.svg" alt="Python logo">
-                            <span>PYTHON</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/access.svg" alt="MS Access logo">
-                            <span>MS ACCESS</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/javascript.svg" alt="JavaScript logo">
-                            <span>JAVASCRIPT</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/react.svg" alt="React logo">
-                            <span>REACT.JS</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/tailwind.svg" alt="Tailwind CSS logo">
-                            <span>TAILWIND CSS</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/supabase.svg" alt="Supabase logo">
-                            <span>SUPABASE</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/figma.svg" alt="Figma logo">
-                            <span>FIGMA</span>
-                        </div>
-
-
-                        <!-- DUPLICATE SET FOR SEAMLESS ANIMATION -->
-
-                        <div class="tech-item">
-                            <img src="images/techstack/c.svg" alt="C logo">
-                            <span>C</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/csharp.svg" alt="C# logo">
-                            <span>C#</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/python.svg" alt="Python logo">
-                            <span>PYTHON</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/access.svg" alt="MS Access logo">
-                            <span>MS ACCESS</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/javascript.svg" alt="JavaScript logo">
-                            <span>JAVASCRIPT</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/react.svg" alt="React logo">
-                            <span>REACT.JS</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/tailwind.svg" alt="Tailwind CSS logo">
-                            <span>TAILWIND CSS</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/supabase.svg" alt="Supabase logo">
-                            <span>SUPABASE</span>
-                        </div>
-
-                        <div class="tech-item">
-                            <img src="images/techstack/figma.svg" alt="Figma logo">
-                            <span>FIGMA</span>
-                        </div>
-
+                        <!-- SET 2 FOR SEAMLESS LOOP -->
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/c" alt="C"><span>C</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/csharp" alt="C#"><span>C#</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/python" alt="Python"><span>PYTHON</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/microsoftaccess" alt="MS Access"><span>MS ACCESS</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript"><span>JAVASCRIPT</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/react" alt="React"><span>REACT.JS</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind"><span>TAILWIND CSS</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase"><span>SUPABASE</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/figma" alt="Figma"><span>FIGMA</span></div>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-
-        <!-- ==================================================
-             PROJECTS SECTION
-        ================================================== -->
-
+        <!-- PROJECTS SECTION -->
         <section id="projects" class="section projects-section reveal">
-
-            <div class="section-number">
-                03
-            </div>
-
-
+            <div class="section-number">03</div>
             <div class="section-content">
-
-                <p class="section-label">
-                    SELECTED WORK
-                </p>
-
-                <h2>
-                    PROJECTS<br>
-                    I'VE BUILT.
-                </h2>
-
+                <p class="section-label">SELECTED WORK</p>
+                <h2>PROJECTS<br>I'VE BUILT.</h2>
 
                 <div class="projects-list">
-
-
-                    <!-- PROJECT 01: ROBOQUEST -->
-
                     <article class="project">
-
-                        <div class="project-number">
-                            01
-                        </div>
-
+                        <div class="project-number">01</div>
                         <div class="project-info">
-
-                            <h3>
-                                ROBOQUEST
-                            </h3>
-
-                            <p>
-                                An interactive technology project focused
-                                on user experience and virtual design.
-                                The project received recognition for
-                                Best in Virtual Design, Best in Usability,
-                                and Best Overall Design.
-                            </p>
-
+                            <h3>ROBOQUEST</h3>
+                            <p>An interactive technology project focused on user experience and virtual design. The project received recognition for Best in Virtual Design, Best in Usability, and Best Overall Design.</p>
                             <div class="project-tags">
-
-                                <span>UI/UX</span>
-                                <span>FIGMA</span>
-                                <span>VIRTUAL DESIGN</span>
-
+                                <span>UI/UX</span><span>FIGMA</span><span>VIRTUAL DESIGN</span>
                             </div>
-
                         </div>
-
                     </article>
 
-
-
-                    <!-- PROJECT 02: U-CONVERTIT -->
-
                     <article class="project">
-
-                        <div class="project-number">
-                            02
-                        </div>
-
+                        <div class="project-number">02</div>
                         <div class="project-info">
-
-                            <h3>
-                                U-CONVERTIT
-                            </h3>
-
-                            <p>
-                                An all-in-one academic workstation designed
-                                to help students handle common academic
-                                tasks in one platform.
-                            </p>
-
+                            <h3>U-CONVERTIT</h3>
+                            <p>An all-in-one academic workstation designed to help students handle common academic tasks in one platform.</p>
                             <div class="project-tags">
-
-                                <span>REACT.JS</span>
-                                <span>TAILWIND CSS</span>
-                                <span>SUPABASE</span>
-
+                                <span>REACT.JS</span><span>TAILWIND CSS</span><span>SUPABASE</span>
                             </div>
-
                         </div>
-
                     </article>
 
-
-
-                    <!-- PROJECT 03: QUESTGO -->
-
                     <article class="project">
-
-                        <div class="project-number">
-                            03
-                        </div>
-
+                        <div class="project-number">03</div>
                         <div class="project-info">
-
-                            <h3>
-                                QUESTGO
-                            </h3>
-
-                            <p>
-                                A software project focused on creating
-                                a practical digital solution through
-                                system development, interface design,
-                                and problem-solving.
-                            </p>
-
+                            <h3>QUESTGO</h3>
+                            <p>A software project focused on creating a practical digital solution through system development, interface design, and problem-solving.</p>
                             <div class="project-tags">
-
-                                <span>SOFTWARE</span>
-                                <span>UI/UX</span>
-                                <span>SYSTEM DEVELOPMENT</span>
-
+                                <span>SOFTWARE</span><span>UI/UX</span><span>SYSTEM DEVELOPMENT</span>
                             </div>
-
                         </div>
-
                     </article>
-
                 </div>
-
             </div>
-
         </section>
 
-
-
-        <!-- ==================================================
-             EDUCATION SECTION
-        ================================================== -->
-
+        <!-- EDUCATION SECTION -->
         <section class="section education-section reveal">
-
-            <div class="section-number">
-                04
-            </div>
-
-
+            <div class="section-number">04</div>
             <div class="section-content">
-
-                <p class="section-label">
-                    EDUCATION
-                </p>
-
-                <h2>
-                    CURRENTLY<br>
-                    LEARNING.
-                </h2>
-
+                <p class="section-label">EDUCATION</p>
+                <h2>CURRENTLY<br>LEARNING.</h2>
 
                 <div class="education-box">
-
-                    <p class="education-year">
-                        PRESENT
-                    </p>
-
-
+                    <p class="education-year">PRESENT</p>
                     <div>
-
-                        <h3>
-                            BACHELOR OF SCIENCE
-                            IN COMPUTER ENGINEERING
-                        </h3>
-
-                        <p>
-                            Cebu Institute of Technology – University
-                        </p>
-
+                        <h3>BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h3>
+                        <p>Cebu Institute of Technology – University</p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-
-        <!-- ==================================================
-             CONTACT SECTION
-        ================================================== -->
-
+        <!-- CONTACT SECTION -->
         <section id="contact" class="contact-section reveal">
-
             <div class="contact-inner">
-
-                <p class="section-label">
-                    05 / CONTACT
-                </p>
-
-                <h2>
-                    LET'S<br>
-                    BUILD<br>
-                    <span>SOMETHING.</span>
-                </h2>
-
+                <p class="section-label">05 / CONTACT</p>
+                <h2>LET'S<br>BUILD<br><span>SOMETHING.</span></h2>
 
                 <address class="contact-links">
-
                     <!-- GMAIL -->
                     <a href="mailto:markanthonyblanco20@gmail.com" aria-label="Gmail" title="Gmail">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
-
                     <!-- GITHUB -->
                     <a href="https://github.com/Markbugwak" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
                         <i class="fa-brands fa-github"></i>
                     </a>
-
                     <!-- FACEBOOK -->
                     <a href="https://www.facebook.com/markanthony.blanco.5811" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
-
                 </address>
-
             </div>
-
         </section>
-
     </main>
 
-
-
-    <!-- ==================================================
-         FOOTER
-    ================================================== -->
-
+    <!-- FOOTER -->
     <footer>
-
-        <p>
-            MARK ANTHONY A. BLANCO
-        </p>
-
-        <p>
-            COMPUTER ENGINEERING
-        </p>
-
-        <p>
-            © 2026
-        </p>
-
+        <p>MARK ANTHONY A. BLANCO</p>
+        <p>COMPUTER ENGINEERING</p>
+        <p>© 2026</p>
     </footer>
 
-
     <!-- ==================================================
-         SCRIPTS
+         JAVASCRIPT
     ================================================== -->
-
     <script>
-        // Loading screen fade-out
-        window.addEventListener("load", function () {
-            const loader = document.getElementById("loader");
-            if (loader) {
-                setTimeout(() => {
-                    loader.classList.add("hidden");
-                }, 2200);
+        // ===== DARK MODE =====
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Load saved theme from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
             }
         });
 
-        // Scroll reveal animation
+        // ===== CINEMATIC LOADING SEQUENCE =====
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            if (loader) {
+                // trigger letterbox bars to open just before the growth finishes
+                setTimeout(() => {
+                    loader.classList.add("reveal");
+                }, 3600);
+
+                // fully hide the loader after bars have opened
+                setTimeout(() => {
+                    loader.classList.add("hidden");
+                }, 4600);
+            }
+        });
+
+        // ===== SCROLL REVEAL =====
         function revealOnScroll() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 100;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -619,9 +286,8 @@
             }
         }
         window.addEventListener("scroll", revealOnScroll);
-        revealOnScroll();
+        revealOnScroll(); // Trigger immediately on load
     </script>
 
 </body>
-
 </html>
