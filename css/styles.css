@@ -452,7 +452,7 @@ address {
     overflow: hidden;
     border-top: 3px solid #000000;
     border-bottom: 3px solid #000000;
-    padding: 20px 0;
+    padding: 0; /* Removed padding so vertical divider lines touch top & bottom borders */
     background: #ffffff;
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -460,19 +460,19 @@ address {
 
 .tech-track {
     display: flex;
-    align-items: center; /* Centers all items on the same horizontal axis */
+    align-items: stretch;
     width: max-content;
     animation: moveRight 30s linear infinite;
 }
 
 .tech-item {
     min-width: 180px;
-    height: 140px;            /* Fixed height for perfectly uniform boxes */
+    height: 150px; /* Fixed height for uniform box */
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;      /* Centers icon & text horizontally */
-    justify-content: center;  /* Centers icon & text vertically */
+    align-items: center;     /* Horizontal center */
+    justify-content: center; /* Vertical center */
     gap: 16px;
     text-align: center;
     border-right: 1px solid #000000;
@@ -481,23 +481,26 @@ address {
 .tech-item img {
     width: 48px;
     height: 48px;
+    display: block;
     object-fit: contain;
     filter: grayscale(100%);
-    opacity: 0.75;            /* Gives all icons a uniform tone */
+    opacity: 0.8;
     transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
 .tech-item span {
-    font-size: 12px;
-
+    font-size: 11px;
     font-weight: bold;
-
     letter-spacing: 2px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
 }
+
 
 .tech-item:hover img {
     filter: grayscale(0%);
-
+    opacity: 1;
     transform: scale(1.15);
 }
 
