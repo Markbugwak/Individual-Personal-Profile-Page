@@ -11,39 +11,36 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <style>
-        .school-link {
-            color: inherit;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .school-link:hover,
-        .school-link:active,
-        .school-link:focus {
-            color: #ff6b00;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- ==================== LOADING SCREEN ==================== -->
-    <div id="loader">
-        <div class="loader-bar loader-bar-top"></div>
-        <div class="loader-bar loader-bar-bottom"></div>
+    <!-- ==================== REDESIGNED LOADING SCREEN ==================== -->
+    <div id="loader" aria-label="Loading page">
+        <div class="loader-curtain loader-curtain-top"></div>
+        <div class="loader-curtain loader-curtain-bottom"></div>
+        <div class="loader-bg-glow"></div>
 
-        <img src="images/loadingscreen/mclaren.svg" alt="McLaren 720S Rear" class="mclaren-img">
-        <div class="loader-vignette"></div>
+        <div class="loader-content">
+            <div class="loader-ring-wrapper">
+                <svg class="loader-ring" viewBox="0 0 120 120">
+                    <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+                    <circle class="ring-fill" cx="60" cy="60" r="52"></circle>
+                </svg>
+                <div class="loader-logo-core">MAB<span>.</span></div>
+            </div>
 
-        <div class="loader-text-box">
-            <p class="loader-text">MAB<span>.</span></p>
-            <p class="loader-sub">LOADING PORTFOLIO...</p>
-        </div>
+            <div class="loader-status-box">
+                <p id="loader-status" class="loader-status-text">INITIALIZING CORE SYSTEM...</p>
+                <div class="loader-meta">
+                    <span class="loader-sub-label">COMPUTER ENGINEERING PORTFOLIO</span>
+                    <span id="loader-percent" class="loader-counter">0%</span>
+                </div>
+            </div>
 
-        <div class="loader-progress">
-            <div class="loader-progress-fill"></div>
+            <div class="loader-progress-track">
+                <div id="loader-fill" class="loader-progress-fill"></div>
+            </div>
         </div>
     </div>
 
@@ -67,8 +64,7 @@
                 <i class="fa-solid fa-moon"></i>
             </button>
 
-            <button id="nav-toggle" class="nav-toggle" aria-label="Open menu"
-                    aria-expanded="false" aria-controls="nav-links">
+            <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -222,44 +218,18 @@
         <section id="education" class="section education-section reveal">
             <div class="section-number">04</div>
             <div class="section-content">
-                <p class="section-label">EDUCATION</p>
-                <h2>ACADEMIC<br>JOURNEY.</h2>
+                <p class="section-label">ACADEMIC BACKGROUND</p>
+                <h2 style="margin-bottom: 60px;">EDUCATION.</h2>
 
-                <div class="education-list">
-                    <div class="education-box">
-                        <p class="education-year">2023 – PRESENT</p>
-                        <div>
-                            <h3>BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h3>
-                            <p>
-                                <a href="https://www.cit.edu/" target="_blank" rel="noopener noreferrer" class="school-link">
-                                    Cebu Institute of Technology – University <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="education-box">
-                        <p class="education-year">2017 – 2023</p>
-                        <div>
-                            <h3>HIGH SCHOOL</h3>
-                            <p>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Abellana+National+High+School+Cebu+City" target="_blank" rel="noopener noreferrer" class="school-link">
-                                    Abellana National High School <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="education-box">
-                        <p class="education-year">2010 – 2017</p>
-                        <div>
-                            <h3>ELEMENTARY SCHOOL</h3>
-                            <p>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Lahug+Elementary+School+Cebu+City" target="_blank" rel="noopener noreferrer" class="school-link">
-                                    Lahug Elementary School <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </p>
-                        </div>
+                <div class="education-box">
+                    <div class="education-year">2023 – PRESENT</div>
+                    <div>
+                        <h3>
+                            <a href="https://cit.edu" target="_blank" rel="noopener noreferrer" class="school-link">
+                                CEBU INSTITUTE OF TECHNOLOGY – UNIVERSITY <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </h3>
+                        <p>Bachelor of Science in Computer Engineering</p>
                     </div>
                 </div>
             </div>
@@ -268,123 +238,127 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="contact-section reveal">
             <div class="contact-inner">
-                <p class="section-label">05 / CONTACT</p>
-                <h2>LET'S<br>BUILD<br><span>SOMETHING.</span></h2>
+                <p class="section-label">GET IN TOUCH</p>
+                <h2>LET'S WORK<br><span>TOGETHER.</span></h2>
 
-                <address class="contact-links">
-                    <!-- GMAIL -->
-                    <a href="mailto:markanthonyblanco20@gmail.com" aria-label="Gmail" title="Gmail">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <!-- GITHUB -->
-                    <a href="https://github.com/Markbugwak" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <!-- FACEBOOK -->
-                    <a href="https://www.facebook.com/markanthony.blanco.5811" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </address>
+                <div class="contact-links">
+                    <a href="mailto:markanthony.blanco@cit.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
         </section>
+
     </main>
 
-    <!-- FOOTER -->
+    <!-- ==================== FOOTER ==================== -->
     <footer>
-        <p>MARK ANTHONY A. BLANCO</p>
-        <p>COMPUTER ENGINEERING</p>
-        <p>© 2026</p>
+        <p>© 2026 MARK ANTHONY A. BLANCO. ALL RIGHTS RESERVED.</p>
+        <p>DESIGNED & DEVELOPED WITH PASSION</p>
     </footer>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <!-- ==================== INTERACTIVE JAVASCRIPT ==================== -->
     <script>
-        // ===== DARK MODE =====
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        const icon = themeToggle.querySelector('i');
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 1. LOADING SCREEN ANIMATION ---
+            const loader = document.getElementById('loader');
+            const percentText = document.getElementById('loader-percent');
+            const statusText = document.getElementById('loader-status');
+            const progressFill = document.getElementById('loader-fill');
+            const ringFill = document.querySelector('.ring-fill');
 
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            icon.classList.replace('fa-moon', 'fa-sun');
-        }
+            const stages = [
+                { threshold: 0, text: 'INITIALIZING CORE SYSTEM...' },
+                { threshold: 30, text: 'LOADING ASSETS & COMPONENTS...' },
+                { threshold: 65, text: 'PREPARING ENVIRONMENT...' },
+                { threshold: 90, text: 'PORTFOLIO READY' }
+            ];
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
+            const circumference = 2 * Math.PI * 52;
+            let currentPercent = 0;
 
-            if (body.classList.contains('dark-mode')) {
-                icon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.setItem('theme', 'light');
-            }
-        });
+            const loaderInterval = setInterval(() => {
+                currentPercent += Math.floor(Math.random() * 3) + 1;
 
-
-        // ===== MOBILE HAMBURGER MENU =====
-        const navToggle = document.getElementById('nav-toggle');
-        const navLinks = document.getElementById('nav-links');
-        const navOverlay = document.getElementById('nav-overlay');
-
-        function setMenu(open) {
-            navToggle.classList.toggle('active', open);
-            navLinks.classList.toggle('active', open);
-            navOverlay.classList.toggle('active', open);
-            document.body.classList.toggle('nav-open', open);
-            navToggle.setAttribute('aria-expanded', String(open));
-            navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        }
-
-        navToggle.addEventListener('click', () => {
-            setMenu(!navLinks.classList.contains('active'));
-        });
-
-        navOverlay.addEventListener('click', () => setMenu(false));
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => setMenu(false));
-        });
-
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') setMenu(false);
-        });
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 800) setMenu(false);
-        });
-
-
-        // ===== CINEMATIC LOADING SEQUENCE =====
-        window.addEventListener("load", function () {
-            const loader = document.getElementById("loader");
-            if (loader) {
-                setTimeout(() => {
-                    loader.classList.add("reveal");
-                }, 3600);
-
-                setTimeout(() => {
-                    loader.classList.add("hidden");
-                }, 4600);
-            }
-        });
-
-
-        // ===== SCROLL REVEAL =====
-        function revealOnScroll() {
-            const reveals = document.querySelectorAll(".reveal");
-            for (let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 100;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
+                if (currentPercent >= 100) {
+                    currentPercent = 100;
+                    clearInterval(loaderInterval);
+                    finishLoading();
                 }
-            }
-        }
-        window.addEventListener("scroll", revealOnScroll);
-        revealOnScroll();
-    </script>
 
+                percentText.textContent = `${currentPercent}%`;
+                progressFill.style.width = `${currentPercent}%`;
+
+                const offset = circumference - (currentPercent / 100) * circumference;
+                ringFill.style.strokeDashoffset = offset;
+
+                for (let i = stages.length - 1; i >= 0; i--) {
+                    if (currentPercent >= stages[i].threshold) {
+                        if (statusText.textContent !== stages[i].text) {
+                            statusText.textContent = stages[i].text;
+                        }
+                        break;
+                    }
+                }
+            }, 25);
+
+            function finishLoading() {
+                setTimeout(() => {
+                    loader.classList.add('reveal');
+                    setTimeout(() => {
+                        loader.classList.add('hidden');
+                    }, 800);
+                }, 300);
+            }
+
+            // --- 2. MOBILE NAVIGATION DRAWER ---
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const navOverlay = document.getElementById('nav-overlay');
+
+            function toggleMenu() {
+                const isOpen = navLinks.classList.contains('active');
+                navToggle.classList.toggle('active', !isOpen);
+                navLinks.classList.toggle('active', !isOpen);
+                navOverlay.classList.toggle('active', !isOpen);
+                document.body.classList.toggle('nav-open', !isOpen);
+                navToggle.setAttribute('aria-expanded', !isOpen);
+            }
+
+            navToggle.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', toggleMenu);
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) toggleMenu();
+                });
+            });
+
+            // --- 3. DARK MODE TOGGLE ---
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = themeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.className = 'fa-solid fa-sun';
+                } else {
+                    icon.className = 'fa-solid fa-moon';
+                }
+            });
+
+            // --- 4. SCROLL REVEAL ANIMATION ---
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
