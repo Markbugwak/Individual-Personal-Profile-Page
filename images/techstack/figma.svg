@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">Figma</title>
-  <path d="M22 4h10v14H22a7 7 0 1 1 0-14z" fill="#f24e1e"/>
-  <path d="M32 4h10a7 7 0 1 1 0 14H32z" fill="#ff7262"/>
-  <path d="M22 18h10v14H22a7 7 0 1 1 0-14z" fill="#a259ff"/>
-  <path d="M32 18h10a7 7 0 1 1 0 14H32z" fill="#1abcfe"/>
-  <path d="M22 32h10v14H22a7 7 0 1 1 0-14z" fill="#0acf83"/>
-</svg>

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">HTML5</title>
-  <path d="M8 5h48l-4.4 49.7L32 59 12.4 54.7z" fill="#e44d26"/>
-  <path d="M32 9v45.7l15.9-3.5L51.6 9z" fill="#f16529"/>
-  <path d="M19 19h13v6H25l.4 6H32v6h-12zm1.3 21H26l.4 4.5 5.6 1.5v6.2l-11.1-3.1z" fill="#fff"/>
-  <path d="M45 19H32v6h12.5zM44 31H32v6h6.5l-.6 6.5-5.9 1.5v6.2l11.2-3.1z" fill="#fff" opacity=".9"/>
-</svg>

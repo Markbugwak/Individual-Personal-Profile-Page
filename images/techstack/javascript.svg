@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" role="img" aria-labelledby="title">
-  <title id="title">JavaScript</title>
-  <path d="M3 1h58l-4 64-25 7-24-7z" fill="#f2ce2b"/>
-  <path d="M32 1h29l-4 64-25 7z" fill="#f8d62a"/>
-  <path d="M32 7h26l-3.5 56-22.5 6.3z" fill="#ffdc22"/>
-  <path d="M17 14h8v36c0 4.7-1.9 6.8-6.1 6.8-3.8 0-6.8-1-9.1-2.7v-8.2c2.8 1.8 5.1 2.7 7.3 2.7 1.5 0 1.9-.7 1.9-2.8z" fill="#fff"/>
-  <path d="M54 14H37c-4.5 0-7 3.2-7 8v12c0 4.3 2.4 6.8 7 6.8h10v8.2l-17 5v8l23-6.3 2-29.7H40v-5h13z" fill="#fff" transform="translate(9 2) scale(.85)"/>
-</svg>
