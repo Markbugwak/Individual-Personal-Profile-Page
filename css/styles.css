@@ -305,6 +305,7 @@ h1, h2, h3, p { overflow-wrap: break-word; word-break: break-word; }
     max-width: 400px;
     aspect-ratio: 3 / 4;
     object-fit: cover;
+    object-position: center 20%; /* Keeps head and face centered */
     filter: grayscale(100%);
     border: 3px solid #000000;
     box-shadow: 12px 12px 0 #ff8000;
