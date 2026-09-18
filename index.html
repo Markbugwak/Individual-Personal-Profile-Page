@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <style>
+        .school-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .school-link:hover,
+        .school-link:active,
+        .school-link:focus {
+            color: #ff6b00;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,6 +57,7 @@
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#skills">SKILLS</a></li>
             <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#education">EDUCATION</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
 
@@ -146,35 +161,56 @@
                 <h2>PROJECTS<br>I'VE BUILT.</h2>
 
                 <div class="projects-list">
+                    <!-- PROJECT 01 -->
                     <article class="project">
                         <div class="project-number">01</div>
                         <div class="project-info">
                             <h3>ROBOQUEST</h3>
                             <p>An interactive technology project focused on user experience and virtual design. The project received recognition for Best in Virtual Design, Best in Usability, and Best Overall Design.</p>
-                            <div class="project-tags">
-                                <span>UI/UX</span><span>FIGMA</span><span>VIRTUAL DESIGN</span>
+                            
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>UI/UX</span><span>FIGMA</span><span>VIRTUAL DESIGN</span>
+                                </div>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    LIVE DEMO <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
                             </div>
                         </div>
                     </article>
 
+                    <!-- PROJECT 02 -->
                     <article class="project">
                         <div class="project-number">02</div>
                         <div class="project-info">
                             <h3>U - CONVERTIT</h3>
                             <p>An all-in-one academic workstation designed to help students handle common academic tasks in one platform.</p>
-                            <div class="project-tags">
-                                <span>REACT.JS</span><span>TAILWIND CSS</span><span>SUPABASE</span>
+                            
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>REACT.JS</span><span>TAILWIND CSS</span><span>SUPABASE</span>
+                                </div>
+                                <a href="https://u-convertit-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    LIVE DEMO <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
                             </div>
                         </div>
                     </article>
 
+                    <!-- PROJECT 03 -->
                     <article class="project">
                         <div class="project-number">03</div>
                         <div class="project-info">
                             <h3>QUESTGO</h3>
                             <p>A software project focused on creating a practical digital solution through system development, interface design, and problem-solving.</p>
-                            <div class="project-tags">
-                                <span>SOFTWARE</span><span>UI/UX</span><span>SYSTEM DEVELOPMENT</span>
+                            
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>SOFTWARE</span><span>UI/UX</span><span>SYSTEM DEVELOPMENT</span>
+                                </div>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    LIVE DEMO <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
                             </div>
                         </div>
                     </article>
@@ -183,17 +219,47 @@
         </section>
 
         <!-- EDUCATION SECTION -->
-        <section class="section education-section reveal">
+        <section id="education" class="section education-section reveal">
             <div class="section-number">04</div>
             <div class="section-content">
                 <p class="section-label">EDUCATION</p>
-                <h2>CURRENTLY<br>LEARNING.</h2>
+                <h2>ACADEMIC<br>JOURNEY.</h2>
 
-                <div class="education-box">
-                    <p class="education-year">PRESENT</p>
-                    <div>
-                        <h3>BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h3>
-                        <p>Cebu Institute of Technology – University</p>
+                <div class="education-list">
+                    <div class="education-box">
+                        <p class="education-year">2023 – PRESENT</p>
+                        <div>
+                            <h3>BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h3>
+                            <p>
+                                <a href="https://www.cit.edu/" target="_blank" rel="noopener noreferrer" class="school-link">
+                                    Cebu Institute of Technology – University <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-box">
+                        <p class="education-year">2017 – 2023</p>
+                        <div>
+                            <h3>HIGH SCHOOL</h3>
+                            <p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Abellana+National+High+School+Cebu+City" target="_blank" rel="noopener noreferrer" class="school-link">
+                                    Abellana National High School <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-box">
+                        <p class="education-year">2010 – 2017</p>
+                        <div>
+                            <h3>ELEMENTARY SCHOOL</h3>
+                            <p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Lahug+Elementary+School+Cebu+City" target="_blank" rel="noopener noreferrer" class="school-link">
+                                    Lahug Elementary School <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

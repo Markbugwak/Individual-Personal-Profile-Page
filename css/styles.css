@@ -305,7 +305,7 @@ h1, h2, h3, p { overflow-wrap: break-word; word-break: break-word; }
     max-width: 400px;
     aspect-ratio: 3 / 4;
     object-fit: cover;
-    object-position: center 20%; /* Keeps head and face centered */
+    object-position: center 20%;
     filter: grayscale(100%);
     border: 3px solid #000000;
     box-shadow: 12px 12px 0 #ff8000;
@@ -533,6 +533,37 @@ h1, h2, h3, p { overflow-wrap: break-word; word-break: break-word; }
     color: #ff8000;
 }
 
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #ff8000;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ff8000;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.project-link:hover {
+    background: #ff8000;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
 
 /* ==================================================
    EDUCATION
@@ -558,6 +589,22 @@ h1, h2, h3, p { overflow-wrap: break-word; word-break: break-word; }
     margin-bottom: 20px;
 }
 .education-box p { font-size: 14px; }
+
+/* SCHOOL LINKS HOVER & ACTIVE STYLING */
+.school-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.school-link:hover,
+.school-link:active,
+.school-link:focus {
+    color: #ff8000;
+}
 
 
 /* ==================================================
@@ -774,6 +821,17 @@ body.dark-mode .hero-image img { border-color: #ffffff; }
     .project-info { padding: 25px 20px; }
     .project-info h3 { letter-spacing: -2px; margin-bottom: 18px; }
     .project-tags span { font-size: 8px; padding: 6px 10px; }
+    
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .project-link {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
 
     .education-box { grid-template-columns: 1fr; }
     .education-year {
